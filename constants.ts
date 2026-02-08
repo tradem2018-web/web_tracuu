@@ -106,7 +106,7 @@ export const CONTENT: Record<Language, ContentData> = {
         },
         {
           title: '7. Liên Hệ',
-          content: 'Nếu bạn có bất kỳ câu hỏi hoặc đề xuất nào về Chính sách Quyền riêng tư của chúng tôi, đừng ngần ngại liên hệ tại Email: support@tracuudiachissn.online'
+          content: 'Nếu bạn có bất kỳ câu hỏi hoặc đề xuất nào về Chính sách Quyền riêng tư của chúng tôi, đừng ngần ngại liên hệ tại Email: support@tracuudiachi.online'
         }
       ]
     },
@@ -227,7 +227,7 @@ export const CONTENT: Record<Language, ContentData> = {
         },
         {
           title: '7. Contact',
-          content: 'If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at Email: support@tracuudiachissn.online'
+          content: 'If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at Email: support@tracuudiachi.online'
         }
       ]
     },
