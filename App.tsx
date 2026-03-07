@@ -30,11 +30,11 @@ const App: React.FC = () => {
   return (
     <HashRouter>
       <ScrollToTop />
-      <div className="min-h-screen bg-white font-sans text-slate-900 flex flex-col">
-        <AppNavbar
-          lang={lang}
-          toggleLang={toggleLang}
-          content={currentContent.nav}
+      <div className="min-h-screen bg-white font-sans text-slate-900 flex flex-col selection:bg-primary/20 selection:text-primary">
+        <AppNavbar 
+          lang={lang} 
+          toggleLang={toggleLang} 
+          content={currentContent.nav} 
         />
         <main className="flex-grow pt-16">
           <Routes>

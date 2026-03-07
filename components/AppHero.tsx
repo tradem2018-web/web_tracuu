@@ -3,56 +3,64 @@ import { Download, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ContentData } from '../types';
 
-interface HeroProps {
+interface AppHeroProps {
   content: ContentData['hero'];
 }
 
-const Hero: React.FC<HeroProps> = ({ content }) => {
+const AppHero: React.FC<AppHeroProps> = ({ content }) => {
   return (
-    <section className="min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 py-12">
+    <section className="min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gradient-to-br from-slate-50 via-white to-blue-50 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="text-center max-w-3xl mx-auto">
-          {/* Changed font class to font-heading and font-black for better impact */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-gray-900 tracking-tight mb-6 animate-fade-in-up">
+        <div className="text-center max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 tracking-tight mb-8 leading-[1.1]">
             {content.title}
           </h1>
-          <p className="mt-4 text-xl text-gray-600 mb-8 leading-relaxed">
+          <p className="mt-6 text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
             {content.subtitle}
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-            <button className="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-primary hover:bg-sky-700 md:py-4 md:text-lg md:px-10 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
-              <Download className="w-5 h-5 mr-2" />
-              {content.download}
-            </button>
+          <div className="flex flex-col sm:flex-row justify-center gap-5 mb-16 flex-wrap">
+            <a 
+              href="https://play.google.com/store/apps/details?id=com.hoangld.contactbook&pcampaignid=web_share"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-full text-white bg-primary hover:bg-sky-700 shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 active:scale-95"
+            >
+              <Download className="w-5 h-5 mr-3" />
+              Google Play
+            </a>
+            <a 
+              href="https://apps.apple.com/vn/app/tra-cứu-địa-chỉ-sau-sáp-nhập/id6759974791?l=vi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-full text-white bg-gray-900 hover:bg-black shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 active:scale-95"
+            >
+              <Download className="w-5 h-5 mr-3" />
+              App Store
+            </a>
             <Link 
               to="/intro"
-              className="flex items-center justify-center px-8 py-3 border border-gray-300 text-base font-medium rounded-full text-gray-700 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10 shadow-sm transition-all"
+              className="flex items-center justify-center px-8 py-4 border border-gray-200 text-lg font-bold rounded-full text-gray-700 bg-white hover:bg-gray-50 shadow-sm transition-all hover:border-gray-300 active:scale-95"
             >
               {content.learnMore}
-              <ChevronRight className="w-5 h-5 ml-1" />
+              <ChevronRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
           
-          {/* Mockup Placeholder */}
-          <div className="relative">
-             <div className="absolute inset-0 flex items-center justify-center filter blur-3xl opacity-30">
-                <div className="w-72 h-72 bg-primary rounded-full"></div>
-                <div className="w-72 h-72 bg-accent rounded-full ml-[-4rem]"></div>
+          <div className="relative max-w-lg mx-auto">
+             <div className="absolute inset-0 flex items-center justify-center filter blur-[100px] opacity-20 pointer-events-none">
+                <div className="w-80 h-80 bg-primary rounded-full"></div>
+                <div className="w-80 h-80 bg-accent rounded-full -ml-20"></div>
              </div>
-             <div className="relative mx-auto rounded-2xl shadow-2xl overflow-hidden border-8 border-white bg-gray-800 max-w-sm h-[500px] flex items-center justify-center transform hover:scale-[1.02] transition-transform duration-500">
+             <div className="relative mx-auto rounded-[2.5rem] shadow-2xl overflow-hidden border-[12px] border-white bg-gray-900 aspect-[9/18.5] max-w-[320px] transition-all duration-700 hover:rotate-2 hover:scale-105">
                  <div className="w-full h-full relative">
                     <img 
                         src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800&auto=format&fit=crop" 
-                        alt="Bàn tay đang cầm điện thoại tra cứu" 
-                        className="object-cover w-full h-full"
-                        onError={(e) => {
-                          // Fallback image if the first one fails
-                          e.currentTarget.src = "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop";
-                        }}
+                        alt="App interface" 
+                        className="object-cover w-full h-full opacity-90"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent flex items-end justify-center pb-8 px-4">
-                        <p className="text-white font-medium text-sm text-center drop-shadow-md leading-relaxed">
-                          Hỗ trợ đắc lực Shipper tránh lạc đường, Môi giới Bất động sản tư vấn pháp lý chính xác, Người kinh doanh cập nhật chứng từ và Người dân vùng sáp nhập làm thủ tục hành chính dễ dàng
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent flex flex-col justify-end p-6">
+                        <p className="text-white text-sm font-medium leading-relaxed text-center mb-4">
+                            Hỗ trợ đắc lực Shipper tránh lạc đường, Môi giới Bất động sản tư vấn pháp lý chính xác, Người kinh doanh cập nhật chứng từ và Người dân vùng sáp nhập làm thủ tục hành chính dễ dàng
                         </p>
                     </div>
                  </div>
@@ -64,4 +72,4 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
   );
 };
 
-export default Hero;
+export default AppHero;

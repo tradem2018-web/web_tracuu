@@ -10,8 +10,8 @@ export const CONTENT: Record<Language, ContentData> = {
       contact: 'Liên hệ',
     },
     hero: {
-      title: 'Tra cứu Địa chỉ sau Sáp nhập 2026',
-      subtitle: 'Cập nhật thông tin địa giới hành chính và chuyển đổi địa chỉ theo Nghị quyết 76/2025/UBTVQH15.',
+      title: 'Tra cứu Địa chỉ sau Sáp nhập',
+      subtitle: 'Cập nhật thông tin địa giới hành chính và chuyển đổi địa chỉ theo Nghị quyêt 76/2025/UBTVQH15.',
       download: 'Tải Ứng Dụng Ngay',
       learnMore: 'Tìm hiểu thêm',
     },
@@ -106,7 +106,7 @@ export const CONTENT: Record<Language, ContentData> = {
         },
         {
           title: '7. Liên Hệ',
-          content: 'Nếu bạn có bất kỳ câu hỏi hoặc đề xuất nào về Chính sách Quyền riêng tư của chúng tôi, đừng ngần ngại liên hệ tại Email: support@tracuudiachi.online'
+          content: 'Nếu bạn có bất kỳ câu hỏi hoặc đề xuất nào về Chính sách Quyền riêng tư của chúng tôi, đừng ngần ngại liên hệ tại Email: support@tracuudiachissn.online'
         }
       ]
     },
@@ -131,8 +131,8 @@ export const CONTENT: Record<Language, ContentData> = {
       contact: 'Contact',
     },
     hero: {
-      title: 'Post-Merger Address Lookup 2026',
-      subtitle: 'Update administrative boundary information and address conversion per Resolution 76/2025/UBTVQH15.',
+      title: 'Post-Merger Address Lookup',
+      subtitle: 'Update administrative boundary information and address conversion.',
       download: 'Download App Now',
       learnMore: 'Learn More',
     },
@@ -227,7 +227,7 @@ export const CONTENT: Record<Language, ContentData> = {
         },
         {
           title: '7. Contact',
-          content: 'If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at Email: support@tracuudiachi.online'
+          content: 'If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at Email: support@tracuudiachissn.online'
         }
       ]
     },
